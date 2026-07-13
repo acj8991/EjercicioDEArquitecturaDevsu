@@ -1,0 +1,8 @@
+{
+  "expo": {
+    "name": "BP Banca Digital",
+    "slug": "bp-banca-digital",
+    "scheme": "bpbanca",
+    "version": "0.1.0"
+  }
+}

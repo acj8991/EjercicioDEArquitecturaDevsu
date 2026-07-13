@@ -1,0 +1,9 @@
+server:
+  port: ${PORT:3022}
+
+spring:
+  application:
+    name: transferencias-service
+
+red-interbancaria:
+  base-url: ${RED_INTERBANCARIA_URL:}

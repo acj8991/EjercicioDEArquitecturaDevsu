@@ -1,0 +1,229 @@
+<mxfile host="app.diagrams.net" agent="bp-arquitectura">
+  <diagram name="Contenedores" id="contenedores">
+    <mxGraphModel dx="1068" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1018" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#08427B;strokeColor=#052E56;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Persona]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Usuario de banca digital&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="850" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n1019" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fillColor=#F5F9FF;strokeColor=#9AB6DD;dashed=1;fontSize=11;fontStyle=1;fontColor=#333333;spacing=6;" value="Sistema de Banca por Internet BP (AWS)" vertex="1">
+          <mxGeometry height="900" width="1860" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="n1020" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;CDN + WAF&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[CloudFront + AWS WAF]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Distribución estática y protección perimetral&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="840" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="n1021" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;SPA Web&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[React + TypeScript]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;SPA para navegador&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="700" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="n1022" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;App Móvil&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[React Native]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;App iOS/Android con onboarding biométrico&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="980" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="n1023" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Amazon API Gateway]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Entrada única, throttling, valida JWT, mTLS&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="240" x="830" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="n1024" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;BFF Web&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Orquesta/adapta para la SPA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="700" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="n1025" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;BFF Mobile&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Orquesta/adapta para la app móvil&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="980" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="n1026" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Servicio de Identidad&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Token broker OAuth2.0 + WebAuthn&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="85" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="n1027" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Servicio de Onboarding&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Registro + verificación de identidad&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="335" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="n1028" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Servicio de Clientes&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Agrega Core + Complementario&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="585" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="n1029" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Servicio de Movimientos&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Histórico y saldos&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="225" x="835" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="n1030" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Servicio de Transferencias&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Propias e interbancarias&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="1085" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="n1031" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Servicio de Notificaciones&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Orquesta push/SMS/email&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="1335" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="n1032" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Servicio de Auditoría&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Node.js/NestJS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Consume eventos, persiste trazas&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="1585" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="n1033" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;" value="&lt;b&gt;Cache&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[ElastiCache Redis]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Sesiones y cache&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="230" x="335" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="n1034" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;" value="&lt;b&gt;BD Transaccional&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Aurora PostgreSQL Multi-AZ]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Transferencias y onboarding&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="230" x="585" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="n1035" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;spacing=6;verticalAlign=middle;align=center;" value="&lt;b&gt;Bus de Eventos&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[EventBridge / MSK]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Comunicación asíncrona&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="230" x="835" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="n1036" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;" value="&lt;b&gt;BD de Auditoría&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[Aurora append-only + hash-chain]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Registro inmutable&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="230" x="1085" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="n1037" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;" value="&lt;b&gt;Evidencia&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;[S3 + KMS]&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:8.5px&quot;&gt;Evidencia biométrica cifrada&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="230" x="1335" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="n1038" edge="1" parent="1" source="n1018" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1020" value="HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1039" edge="1" parent="1" source="n1020" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1021" value="Sirve app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1040" edge="1" parent="1" source="n1021" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1023" value="HTTPS/JSON + JWT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1041" edge="1" parent="1" source="n1022" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1023" value="HTTPS/JSON + JWT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1042" edge="1" parent="1" source="n1023" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1024" value="HTTPS/JSON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1043" edge="1" parent="1" source="n1023" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1025" value="HTTPS/JSON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1044" edge="1" parent="1" source="n1024" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1026" value="REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1045" edge="1" parent="1" source="n1024" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1027" value="REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1046" edge="1" parent="1" source="n1024" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1028" value="REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1047" edge="1" parent="1" source="n1024" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1029" value="REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="675" />
+              <mxPoint x="920" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1048" edge="1" parent="1" source="n1024" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1030" value="REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="460" />
+              <mxPoint x="1280" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1049" edge="1" parent="1" source="n1025" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1026" value="REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="450" />
+              <mxPoint x="200" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1050" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;entryX=0.664;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;" target="n1027" value="REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1085" y="620" />
+              <mxPoint x="530" y="620" />
+              <mxPoint x="530" y="720" />
+              <mxPoint x="486" y="720" />
+              <mxPoint x="486" y="741" />
+            </Array>
+            <mxPoint x="1085" y="610" as="sourcePoint" />
+            <mxPoint x="486.1100000000001" y="778" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1051" edge="1" parent="1" source="n1025" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1028" value="REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="480" />
+              <mxPoint x="640" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1052" edge="1" parent="1" source="n1025" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1029" value="REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1053" edge="1" parent="1" source="n1025" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1030" value="REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1054" edge="1" parent="1" source="n1030" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1035" value="Publica TransferenciaRealizada">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1200" y="830" />
+              <mxPoint x="950" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1055" edge="1" parent="1" source="n1027" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1035" value="Publica ClienteOnboarded">
+          <mxGeometry relative="1" x="0.0877" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="450" y="840" />
+              <mxPoint x="940" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1056" edge="1" parent="1" source="n1035" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1031" value="Consume eventos">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="990" />
+              <mxPoint x="1580" y="990" />
+              <mxPoint x="1580" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1057" edge="1" parent="1" source="n1035" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1032" value="Consume eventos (outbox)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="1000" />
+              <mxPoint x="1700" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1058" edge="1" parent="1" source="n1026" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1033" value="Sesiones/tokens">
+          <mxGeometry relative="1" x="-0.1875" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="200" y="860" />
+              <mxPoint x="450" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1059" edge="1" parent="1" source="n1030" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1034" value="Lee/escribe">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1200" y="710" />
+              <mxPoint x="830" y="710" />
+              <mxPoint x="830" y="933" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1060" edge="1" parent="1" source="n1027" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1034" value="Lee/escribe">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="780" />
+              <mxPoint x="570" y="933" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1061" edge="1" parent="1" source="n1027" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1037" value="Guarda evidencia">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="850" />
+              <mxPoint x="1450" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1062" edge="1" parent="1" source="n1032" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#666666;fontColor=#333333;endArrow=block;endFill=1;" target="n1036" value="Escribe (append-only)">
+          <mxGeometry relative="1" x="0.3333" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1700" y="840" />
+              <mxPoint x="1200" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
